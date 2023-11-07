@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include<stdlib.h>
-typedef struct Node
+struct Node
 {
     int data;
     struct Node* next;
-}Node;
+};
 void Print(Node* head)
 {
     printf("List is: ");
