@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\lenovo\Desktop\CELL\CELL\main.cpp(88,19): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  CELL.vcxproj -> C:\Users\lenovo\Desktop\CELL\x64\Debug\CELL.exe
