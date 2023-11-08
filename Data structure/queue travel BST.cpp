@@ -1,37 +1,37 @@
 #include <stdio.h>
 #include <queue>
-struct BstNode 
+struct BstNode
 {
     int data;
-    BstNode* left;
-    BstNode* right;
+    BstNode *left;
+    BstNode *right;
 };
-void LevelOrderTraversal(BstNode* root) 
+void LevelOrderTraversal(BstNode *root)
 {
     if (root == NULL)
     {
         return;
     }
-    std::queue<BstNode*> q;
+    std::queue<BstNode *> q;
     q.push(root);
-    while (!q.empty()) 
+    while (!q.empty())
     {
-        BstNode* current = q.front();
-        printf("%d ",current->data);
+        BstNode *current = q.front();
+        printf("%d ", current->data);
         q.pop();
-        if (current->left != NULL) 
+        if (current->left != NULL)
         {
             q.push(current->left);
         }
-        if (current->right != NULL) 
+        if (current->right != NULL)
         {
             q.push(current->right);
         }
     }
 }
-int main() 
+int main()
 {
-    BstNode* root = new BstNode{1, NULL, NULL};
+    BstNode *root = new BstNode{1, NULL, NULL};
     root->left = new BstNode{2, NULL, NULL};
     root->right = new BstNode{3, NULL, NULL};
     root->left->left = new BstNode{4, NULL, NULL};

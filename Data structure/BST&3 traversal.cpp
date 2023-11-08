@@ -77,19 +77,11 @@ void PreOrderTree(BstNode* node)
         PreOrderTree(node->left);
         PreOrderTree(node->right);
     }
-    else
-    {
-        printf("the tree has not create");
-    }
 }
 void InOrderTree(BstNode* root) 
 {
     Stack* stack = NULL;
     BstNode* current = root;
-    if(root == NULL)
-    {
-        printf("the tree has not create");
-    }
     while (current != NULL || !isEmpty(stack)) 
 	{
         while (current != NULL) 
@@ -110,10 +102,6 @@ void PostOrderTree(BstNode* node)
         PostOrderTree(node->right);
         printf("%d ", node->data);
     }
-    else
-    {
-        printf("the tree has not create");
-    }
 }
 int main()
 {
@@ -125,6 +113,7 @@ int main()
         printf("enter 2 to Preorder Traversal\n");
         printf("enter 3 to InOrderTree Traversal\n");
         printf("enter 4 to Postorder Traversal\n");
+        printf("enter 0 to end\n");
         scanf("%d",&choose);
         if(choose==1)
         {
