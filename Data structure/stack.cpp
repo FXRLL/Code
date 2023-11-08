@@ -20,6 +20,10 @@ int pop(Stack* &top)
 	free(temp);
 	return n;
 }
+int isEmpty(struct Stack* stack)
+{
+    return (stack == NULL);
+}
 int main()
 {
     struct Stack* top = NULL;
