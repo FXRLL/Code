@@ -77,11 +77,19 @@ void PreOrderTree(BstNode* node)
         PreOrderTree(node->left);
         PreOrderTree(node->right);
     }
+    else
+    {
+        printf("the tree has not create");
+    }
 }
 void InOrderTree(BstNode* root) 
 {
     Stack* stack = NULL;
     BstNode* current = root;
+    if(root == NULL)
+    {
+        printf("the tree has not create");
+    }
     while (current != NULL || !isEmpty(stack)) 
 	{
         while (current != NULL) 
@@ -102,19 +110,54 @@ void PostOrderTree(BstNode* node)
         PostOrderTree(node->right);
         printf("%d ", node->data);
     }
+    else
+    {
+        printf("the tree has not create");
+    }
 }
 int main()
 {
     struct BstNode* root = NULL;
-    root = CreateTree(root);
-    printf("Preorder Traversal: ");
-    PreOrderTree(root);
-    printf("\n");
-	printf("InOrderTree Traversal: ");
-    InOrderTree(root);
-    printf("\n");
-    printf("Postorder Traversal: ");
-    PostOrderTree(root);
-    printf("\n");
+    int choose=-1;
+    while(1)
+    {
+        printf("enter 1 to CreateTree\n");
+        printf("enter 2 to Preorder Traversal\n");
+        printf("enter 3 to InOrderTree Traversal\n");
+        printf("enter 4 to Postorder Traversal\n");
+        scanf("%d",&choose);
+        if(choose==1)
+        {
+            root = CreateTree(root);
+            printf("the tree has been created\n");
+        }
+        else if(choose==2)
+        {
+            printf("Preorder Traversal: ");
+            PreOrderTree(root);
+            printf("\n");
+        }
+        else if(choose==3)
+        {
+	        printf("InOrderTree Traversal: ");
+            InOrderTree(root);
+            printf("\n");
+        }
+        else if(choose==4)
+        {
+            printf("Postorder Traversal: ");
+            PostOrderTree(root);
+            printf("\n");
+        }
+        else if(choose==0)
+        {
+            printf("end\n");
+            break;
+        }
+        else 
+        {
+            printf("wrong choose\n");
+        }
+    }
     return 0;
 }
