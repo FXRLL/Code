@@ -1,6 +1,6 @@
 #include <stdio.h>
 const int MAXN = 10;
-const int INF = 10000; // 设置一个较大的值作为无穷大
+const int INF = 10000;
 void prim(int n, int graph[MAXN][MAXN]) 
 {
     int parent[MAXN]; // 存储最小生成树的父节点
@@ -36,7 +36,6 @@ void prim(int n, int graph[MAXN][MAXN])
             }
         }
     }
-    // 输出最小生成树的结果
     printf("edge\tweight\n");
     for (int i = 1; i < n; i++) 
     {
@@ -46,11 +45,9 @@ void prim(int n, int graph[MAXN][MAXN])
 int main() 
 {
     int n; // 顶点数
-    int graph[MAXN][MAXN]={INF}; // 邻接矩阵表示的图
-    // 输入顶点数
+    int graph[MAXN][MAXN]={INF};
     printf("enter number of vertex: ");
     scanf("%d", &n);
-    // 输入邻接矩阵
     printf("set the edge:\n");
     int start,end,weight;
     printf("enter start end weight(or -1 -1 -1 to end):\n");
@@ -69,7 +66,6 @@ int main()
         graph[start-1][end-1]=weight;
         graph[end-1][start-1]=weight;
     }
-    // 调用Prim算法计算最小生成树
     prim(n, graph);
     return 0;
 }
