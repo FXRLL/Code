@@ -115,38 +115,33 @@ int main()
         printf("enter 4 to Postorder Traversal\n");
         printf("enter 0 to end\n");
         scanf("%d",&choose);
-        if(choose==1)
+        switch (choose) 
         {
-            root = CreateTree(root);
-            printf("the tree has been created\n");
-        }
-        else if(choose==2)
-        {
-            printf("Preorder Traversal: ");
-            PreOrderTree(root);
-            printf("\n");
-        }
-        else if(choose==3)
-        {
-	        printf("InOrderTree Traversal: ");
-            InOrderTree(root);
-            printf("\n");
-        }
-        else if(choose==4)
-        {
-            printf("Postorder Traversal: ");
-            PostOrderTree(root);
-            printf("\n");
-        }
-        else if(choose==0)
-        {
-            printf("end\n");
-            break;
-        }
-        else 
-        {
-            printf("wrong choose\n");
+            case 1:
+                root = CreateTree(root);
+                printf("the tree has been created\n");
+                break;
+            case 2:
+                printf("Preorder Traversal: ");
+                PreOrderTree(root);
+                printf("\n");
+                break;
+            case 3:
+                printf("InOrderTree Traversal: ");
+                InOrderTree(root);
+                printf("\n");
+                break;
+            case 4:
+                printf("Postorder Traversal: ");
+                PostOrderTree(root);
+                printf("\n");
+                break;
+            case 0:
+                printf("end\n");
+                return 0;
+            default:
+                printf("wrong choose\n");
+                break;
         }
     }
-    return 0;
 }
