@@ -30,7 +30,7 @@ int isEmpty(struct Stack* stack)
 {
     return (stack == NULL);
 }
-struct BstNode* CreateBstNode(int data)
+BstNode* CreateBstNode(int data)
 {
     struct BstNode* newNode = (struct BstNode*)malloc(sizeof(struct BstNode));
     newNode->data = data;
@@ -38,7 +38,7 @@ struct BstNode* CreateBstNode(int data)
     newNode->right = NULL;
     return newNode;
 }
-struct BstNode* Insert(struct BstNode* root, int data)
+BstNode* Insert(struct BstNode* root, int data)
 {
     if (root == NULL)
     {
@@ -54,7 +54,7 @@ struct BstNode* Insert(struct BstNode* root, int data)
     }
     return root;
 }
-struct BstNode* CreateTree(struct BstNode* root)
+BstNode* CreateTree(struct BstNode* root)
 {
     printf("enter the number (or -1 to end): ");
     int value;
@@ -137,7 +137,6 @@ int main()
                 printf("\n");
                 break;
             case 0:
-                printf("end\n");
                 return 0;
             default:
                 printf("wrong choose\n");
