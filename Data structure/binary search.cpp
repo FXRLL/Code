@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+#include <stack>
+using namespace std;
 int search_recursion(int num[], int low, int high, int target)
 {
     int mid;
@@ -16,22 +17,37 @@ int search_recursion(int num[], int low, int high, int target)
     else
         return search_recursion(num, low, mid - 1, target); // Left half
 }
-
 int search_non_recursion(int num[], int low, int high, int target)
 {
-    while (low <= high)
+    stack<pair<int, int>> st;
+    st.push({low, high});
+    while (!st.empty())
     {
-        int mid = (low + high) / 2;
+        int l = st.top().first;
+        int r = st.top().second;
+        st.pop();
+        int mid = (l + r) / 2;
         if (num[mid] == target)
+        {
             return mid;
+        }
         else if (num[mid] < target)
-            low = mid + 1;
+        {
+            if (mid + 1 <= r)
+            {
+                st.push({mid + 1, r});
+            }
+        }
         else
-            high = mid - 1;
+        {
+            if (l <= mid - 1)
+            {
+                st.push({l, mid - 1});
+            }
+        }
     }
     return -1;
 }
-
 int main()
 {
     printf("Enter the size of the array\n");
@@ -46,7 +62,7 @@ int main()
     int target;
     printf("Enter the search number\n");
     scanf("%d", &target);
-    printf("Recursive search result: %d\n", search_recursion(num, 0, n - 1, target)+1);
-    printf("Non-recursive search result: %d\n", search_non_recursion(num, 0, n - 1, target)+1);
+    printf("Recursive search result: %d\n", search_recursion(num, 0, n - 1, target) + 1);
+    printf("Non-recursive search result: %d\n", search_non_recursion(num, 0, n - 1, target) + 1);
     return 0;
 }
