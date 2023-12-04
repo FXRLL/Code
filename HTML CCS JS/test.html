@@ -11,7 +11,7 @@
 </head>
 <!---->
 
-<body bgcolor="grey" text="white"><!--全局-->
+<body bgcolor="white" text="black"><!--全局-->
     <h1>test</h1><!--h1-h6从大到小，h1会被搜索引擎检测到-->
     <hr width="50%" align="left" size="5" /><!--500px,left,right,center-->
     <p align="justify"> <!--段落之间默认有间隙,两端对齐比较美观-->
@@ -55,12 +55,70 @@
     <a href="#jumpoint">锚点回到跳转点1</a><br>
     <a href="#jumpoint2">锚点回到跳转点2</a><br>
     <hr>
-    <img src="img/preview1.jpg" title="wallpaper启动！" alt="图片丢失" width="500px" border="2" align="center"><!--align规定周围文字环绕-->
-    <a href="https://www.baidu.com/">
-        <img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" title="百度" alt="" border="2" width="300px" >
+    <img src="img/preview1.jpg" title="wallpaper启动！" alt="图片丢失" width="500px" border="2"
+        align="center"><!--align规定周围文字环绕-->
+    <a href="https://www.baidu.com/" target="_blank">
+        <img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" title="百度" alt="" border="2"
+            width="300px">
     </a>
-   
-    
+    <hr>
+    <table border="1" width="500px" style="border-collapse: collapse" align="left"><!--height-->
+        <tr bgcolor="red">
+            <th>序号</th>
+            <th colspan="2">姓名+年龄</th>
+        </tr>
+        <tr align="center"><!--valign-->
+            <td>01</td>
+            <td>name1</td>
+            <td>18</td>
+        </tr>
+        <tr align="center">
+            <td>02</td>
+            <td>name2</td>
+            <td rowspan="2">19</td>
+        </tr>
+        <tr align="center">
+            <td>03</td>
+            <td>name3</td>
+        </tr>
+    </table>
+    <br><br><br><br><br>
+    <hr>
+    <form action="https://www.baidu.com/">
+        文本框：<input type="text" name="name1" maxlength="10"><br>
+        密码框：<input type="password" name="name2" maxlength="10"><br>
+        文本框2：<input type="text" value="test" name="name3" readonly="readonly"><br>
+        单选框：<input type="radio" value="man" name="name4"> man
+        <input type="radio" value="woman" name="name4"> woman <br>
+        复选框：<input type="checkbox" value="A" name="name5">A
+        <input type="checkbox" value="B" name="name5">B
+        <input type="checkbox" value="C" name="name5">C <br>
+        文件域<input type="file" name="name6"> <br>
+        隐藏域<input type="hidden" value="admin"> <br>
+        普通按钮<input type="button" value="普通按钮"> <br>
+        提交按钮<input type="submit" disabled="disabled" value="提交按钮"> <br>
+        提交按钮<input type="reset" value="重置按钮"> <br>
+        图片按钮<input type="image" src="img/preview1.jpg" height="50px" value="图片"> <br>
+        日期框:<input type="date" value="日期框" name="name6"> <br>
+        <label for="labelname">标签</label><br><!--点击标签聚焦对应id的input-->
+        <textarea name="text" id="labelname" cols="30" rows="10"></textarea><br>
+        <button type="button">    
+            <img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" title="wallpaper启动！" alt="图片丢失" width="50px">
+            普通按钮
+        </button><br>
+        city:<select name="city" size="2">
+            <option selected="select">请选择</option><!--value设置了就传value，未设置就传文本-->
+            <option value="beijing">北京</option>
+            <option value="tianjin">天津</option>
+            <option value="shanghai">上海</option>
+        </select><br><br>
+        city:<select name="city" multiple="multiple" size="3">
+            <option value="beijing">北京</option>
+            <option value="tianjin">天津</option>
+            <option value="shanghai">上海</option>
+        </select><br><br>
+        &lt;小于号 &gt;大于号 &nbsp;空格 &copy;版权声明
+    </form>
 </body>
 
 </html>
