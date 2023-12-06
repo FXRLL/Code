@@ -1,0 +1,81 @@
+/*
+基本选择器和优先级：
+    #id{
+
+    }
+    id选择器 #id值 1000
+    class选择器 .class值 100
+    标签选择器 标签名 10
+    分组选择器 选择器1,选择器2，选择器3
+    通用选择器 * 0
+组合选择器：
+    #id + p{
+
+    }
+    后代选择器（空格）
+    子代选择器（大于号）
+    相邻兄弟选择器（加号）
+    普通兄弟选择器（波浪线）
+*/
+a{
+    text-decoration: none;
+}
+#text
+{
+    color:rgb(255, 0, 0);
+    text-align: justify;
+    text-indent: 2em;
+}
+#font
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    font-style: italic;
+    font-weight: bold;
+}
+/*
+块级元素
+    可以设置宽高边距，会自动换行
+行内元素
+    不可以设置宽高边距，不会自动换行
+行内块级元素
+    可以设置宽高边距，不会自动换行
+*/
+#display
+{
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+}
+/*
+浮动
+    横向浮动
+    display属性变为block
+    典型：文字围绕图片
+    清除浮动(html)<div style="clear:both"></div>
+*/
+#box_boder
+{
+    border: 2px red solid;
+    border-color: blanchedalmond;
+    border-width: 1px;
+    border-style: dotted solid;/*上右下左*/
+    border-collapse:collapse;/*合并边框*/
+}
+#box_padding/*改变形状，少用*/
+{
+    padding: 10px 20px 30px 40px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+}
+#box_margin
+{
+    margin: 10px 20px 30px 40px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+}
