@@ -1,3 +1,4 @@
+//如果放在HTML文件中，<script>最好放在</body>后面
 if (false) {
     console.log("switch 1");
 }
