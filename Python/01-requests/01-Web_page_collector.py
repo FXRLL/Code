@@ -15,6 +15,6 @@ param={
 responce=requests.get(url=myurl,params=param,headers=headers)
 page_text=responce.text
 #存储内容
-with open("E:\Code\Python/01-requests\search_page.html","w",encoding="utf-8")as fp:
+with open("C:\Users\lenovo\Desktop\search_page.html","w",encoding="utf-8")as fp:
     fp.write(page_text)
 print("保存成功")
