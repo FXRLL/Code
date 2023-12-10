@@ -1,5 +1,4 @@
 import requests
-import json
 myurl="https://www.kfc.com.cn/kfccda/ashx/GetStoreList.ashx?op=keyword"
 city=input("请输入所查询城市：")
 param={
