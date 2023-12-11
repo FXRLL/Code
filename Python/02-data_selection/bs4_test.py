@@ -1,0 +1,14 @@
+# from bs4 import BeautifulSoup
+# soup = BeautifulSoup(page_text,'lxml')
+# 定位标签
+# soup.tagName返回第一次出现的tagName标签
+# soup.find('tagName',class_/id/attr="")返回第一次出现的tagName标签，可以加属性
+# soup.find_all("tagName")返回所有符合条件的标签，返回列表，可以加属性
+# soup.select('选择器')用css选择器，复合选择器也行，返回列表
+
+# 获取数据
+# soup.a.text/string/get_text()直接获取
+#    text/get_text获取所有文本
+#    string获取一层文本
+# 获取标签中的属性值
+#    soup.tagName['属性名']
