@@ -5,7 +5,7 @@
     加载在线页面
         etree.HTML('page_text')
 
-xpath表达式
+xpath表达式etree.xpath("")返回的是列表
     /  表示从根节点开始定位，一个层级
     // 表示多个层级，可以表示从任意位置开始定位
     属性定位 //tagName[@attrName='attrVaule']
