@@ -1,0 +1,3 @@
+使用session = requests.Session()创建一个对象
+用session.post()时,cookie便会保存在session中
+再用session.get()时,cookie便会跟随发送至服务器
