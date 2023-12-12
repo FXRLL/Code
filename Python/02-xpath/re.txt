@@ -1,3 +1,7 @@
 import re
 ex="正则表达式"
-re.findall(ex,page_text,re.S)
+re.findall(ex,page_text,re.S)返回所有符合条件的
+re.match(ex,page_text)匹配第一个，必须在开头
+re.search(ex,page_text)匹配第一个，可不在开头
+re.sub("被替换","替换为",page_text)替换内容
+re.spilt("截断符号")截断
