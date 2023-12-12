@@ -1,0 +1,8 @@
+def function():
+    阻塞的函数
+    
+pool=Pool(number)
+pool.map(函数名,列表(会把其中元素传入函数))
+
+pool.close()
+pool.join()
