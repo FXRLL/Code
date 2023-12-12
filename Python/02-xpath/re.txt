@@ -1,0 +1,3 @@
+import re
+ex="正则表达式"
+re.findall(ex,page_text,re.S)
