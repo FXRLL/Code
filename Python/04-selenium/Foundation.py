@@ -2,21 +2,21 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
 
-# 无头浏览器
-from selenium.webdriver.chrome.options import Options
-chrome_options = Options()
-chrome_options.add_argument('--headless')
-chrome_options.add_argument('--disable-gpu')
+# # 无头浏览器
+# from selenium.webdriver.chrome.options import Options
+# chrome_options = Options()
+# chrome_options.add_argument('--headless')
+# chrome_options.add_argument('--disable-gpu')
 
-#规避被检测的风险
-from selenium.webdriver import ChromeOptions
-option = ChromeOptions()
-option.add_experimental_option('excludeSwitches',['enable-automation'])
+# #规避被检测的风险
+# from selenium.webdriver import ChromeOptions
+# option = ChromeOptions()
+# option.add_experimental_option('excludeSwitches',['enable-automation'])
 
 from lxml import etree
 from time import sleep
 #实例化并发起请求
-bro=webdriver.Chrome(chrome_options=chrome_options,options=option)
+bro=webdriver.Chrome()
 bro.get("https://www.bilibili.com/")
 tree=etree.HTML(bro.page_source)
 # 获取指定标签内容
