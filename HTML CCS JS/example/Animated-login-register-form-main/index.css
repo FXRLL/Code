@@ -1,26 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "poppins",sans-serif;
+    font-family: "poppins", sans-serif;
 }
-body{
+
+body {
     height: 100vh;
     width: 100%;
     background: #000;
-  
 }
-.background{
+
+.background {
     background: url(backgroun3.jpg) no-repeat;
     background-position: center;
-    background-size:cover ;
+    background-size: cover;
     height: 100vh;
     width: 100%;
     filter: blur(10px);
 }
 
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -33,14 +35,16 @@ body{
     z-index: 100;
 
 }
-.navbar a{
+
+.navbar a {
     position: relative;
     font-size: 16px;
     color: #fff;
     margin-right: 30px;
     text-decoration: none;
 }
-.navbar a::after{
+
+.navbar a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -53,11 +57,13 @@ body{
     opacity: 0;
     transition: .5s ease;
 }
-.navbar a:hover:after{
+
+.navbar a:hover:after {
     transform: translateY(0);
     opacity: 1;
 }
-.search-bar{
+
+.search-bar {
     width: 250px;
     height: 45px;
     background-color: transparent;
@@ -66,7 +72,8 @@ body{
     display: flex;
     align-items: center;
 }
-.search-bar input{
+
+.search-bar input {
     width: 100%;
     background-color: transparent;
     border: none;
@@ -75,7 +82,8 @@ body{
     font-size: 16px;
     padding-left: 10px;
 }
-.search-bar button{
+
+.search-bar button {
     width: 40px;
     height: 100%;
     background: transparent;
@@ -84,29 +92,33 @@ body{
     color: #fff;
     cursor: pointer;
 }
-.search-bar input::placeholder{
+
+.search-bar input::placeholder {
     color: #fff;
 }
-.search-bar button i{
+
+.search-bar button i {
     font-size: 22px;
 }
-.container{
+
+.container {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 75%;
     height: 550px;
     margin-top: 20px;
     background: url(backgroun3.jpg) no-repeat;
     background-position: center;
-    background-size:cover ;
+    background-size: cover;
     border-radius: 20px;
     overflow: hidden;
-    
-    
+
+
 }
-.item{
+
+.item {
     position: absolute;
     top: 0;
     left: 0;
@@ -118,34 +130,40 @@ body{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    
+
 
 
 }
-.item .logo{
+
+.item .logo {
     color: #fff;
     font-size: 30px;
 
 }
-.text-item h2{
+
+.text-item h2 {
     font-size: 40px;
     line-height: 1;
 }
-.text-item p{
+
+.text-item p {
     font-size: 16px;
     margin: 20px 0;
 }
-.social-icon a i{
+
+.social-icon a i {
     color: #fff;
     font-size: 24px;
     margin-left: 10px;
     cursor: pointer;
     transition: .5s ease;
 }
-.social-icon a:hover i{
+
+.social-icon a:hover i {
     transform: scale(1.2);
 }
-.container .login-section{
+
+.container .login-section {
     position: absolute;
     top: 0;
     right: 0;
@@ -155,50 +173,54 @@ body{
     backdrop-filter: blur(10px);
 }
 
-.login-section .form-box{
+.login-section .form-box {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
-    
+
 }
-.login-section .form-box.register{
+
+.login-section .form-box.register {
     transform: translateX(430px);
     transition: transform .6s ease;
     transition-delay: 0s;
 }
-.login-section.active .form-box.register{
+
+.login-section.active .form-box.register {
     transform: translateX(0px);
     transition-delay: .7s;
 }
 
-.login-section .form-box.login{
+.login-section .form-box.login {
     transform: translateX(0px);
     transition: transform .6s ease;
     transition-delay: 0.7s;
 }
-.login-section.active .form-box.login{
+
+.login-section.active .form-box.login {
     transform: translateX(430px);
     transition-delay: 0s;
 }
 
 
 
-.login-section .form-box h2{
+.login-section .form-box h2 {
     text-align: center;
     font-size: 25px;
 }
 
-.form-box .input-box{
+.form-box .input-box {
     width: 340px;
     height: 50px;
     border-bottom: 2px solid#fff;
     margin: 30px 0;
     position: relative;
 }
-.input-box input{
+
+.input-box input {
     width: 100%;
     height: 100%;
     background: transparent;
@@ -209,7 +231,8 @@ body{
 
 
 }
-.input-box label{
+
+.input-box label {
     position: absolute;
     top: 50%;
     left: 0;
@@ -220,36 +243,43 @@ body{
     transition: .5s ease;
 
 }
-.input-box .icon{
+
+.input-box .icon {
     position: absolute;
     top: 13px;
     right: 0;
     font-size: 19px;
 }
-.input-box input:focus~ label,
-.input-box input:valid~ label{
+
+.input-box input:focus~label,
+.input-box input:valid~label {
     top: -5px;
 }
-.remember-password{
+
+.remember-password {
     font-size: 14px;
     font-weight: 500;
-    margin: -15px 0 15px ;
+    margin: -15px 0 15px;
     display: flex;
     justify-content: space-between;
 }
-.remember-password label input{
+
+.remember-password label input {
     accent-color: #fff;
     margin-right: 3px;
 
 }
-.remember-password a{
+
+.remember-password a {
     color: #fff;
     text-decoration: none;
 }
-.remember-password a:hover{
+
+.remember-password a:hover {
     text-decoration: underline;
 }
-.btn{
+
+.btn {
     background: #fff;
     width: 100%;
     height: 45px;
@@ -260,19 +290,22 @@ body{
     background: #f72d7a;
     font-size: 16px;
     color: #fff;
-    box-shadow: rgba(0,0,0,0.4);
+    box-shadow: rgba(0, 0, 0, 0.4);
 
 }
-.create-account{
+
+.create-account {
     font-size: 14.5px;
     text-align: center;
     margin: 25px;
 }
-.create-account p a{
+
+.create-account p a {
     color: #fff;
     font-weight: 600px;
     text-decoration: none;
 }
-.create-account p a:hover{
+
+.create-account p a:hover {
     text-decoration: underline;
 }
