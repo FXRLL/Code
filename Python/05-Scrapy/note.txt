@@ -9,9 +9,6 @@ USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 ROBOTSTXT_OBEY = False
 LOG_LEVEL = 'ERROR' 屏蔽冗杂日志
 
-终端存储
-scrapy crawl XXX -o filePath
-
 持久化存储
     基于终端指令
         要求：只可以将parse方法的返回值存储到本地的文本文件中
