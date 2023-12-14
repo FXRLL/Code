@@ -17,4 +17,6 @@ class CodeSpider(scrapy.Spider):
             new_url = format(self.url%self.page_num)
             self.page_num+=1
             # 手动发起请求，如果符合条件则再次反复调用parse
-            yield scrapy.Request(url=new_url,callback=self.parse)
+            yield scrapy.Request(url=new_url,callback=self.parse,)  # meta={'key':value}请求传参，可以把参数传入回调函数
+                                                                    # 回调函数调用时 item=response.meta['key']，然后正常执行便能让item再加上回调函数的新value
+                                                                    # 有点类似于把若干二级函数接到了主函数上
