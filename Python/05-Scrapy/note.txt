@@ -1,0 +1,25 @@
+cd path 加载至目录
+scrapy startproject XXX
+cd XXX
+scrapy genspider XXX www.xxx.com
+scrapy crawl XXX
+
+
+USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+ROBOTSTXT_OBEY = False
+LOG_LEVEL = 'ERROR' 屏蔽冗杂日志
+
+终端存储
+scrapy crawl XXX -o filePath
+
+持久化存储
+    基于终端指令
+        要求：只可以将parse方法的返回值存储到本地的文本文件中
+        格式：json csv xml等，比较有限
+        scrapy crawl xxx -o filePath
+    基于管道
+        在item类中定义相关的属性
+        将解析之后的数据封装到item类型的对象
+        将item类型的对象提交到管道
+        在管道类process_item中要将接收到的item类型对象存储
+        在配置文件中手动开启管道
